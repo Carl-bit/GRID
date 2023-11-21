@@ -1,5 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import {App} from './App.jsx'
+import './index.css'
 
 //ni idea como son los comentarios grandes
 //pero, acotaciones
@@ -25,17 +27,20 @@ import ReactDOM from 'react-dom/client'
 //pillar el por que del error al cargar los componentes
 //[vite] hmr update /src/main.jsx
 //[vite] hmr invalidate /src/main.jsx Could not Fast Refresh. Learn more at https://github.com/vitejs/vite-plugin-react-swc#consistent-components-exports
+//** <React.Fragment>
+//    <Button text ="Button 0"/>
+//    <Button text ="Button 1"/>
+//  </React.Fragment> 
+//const Button = ({ text }) => {
+//  return (
+//    <button>{text}</button>
+//  )
 
-const Button = ({ text }) => {
-  return (
-    <button>{text}</button>
-  )
+//-----------------------------------------------------------------
+ //puedes importar desde otros archivos .jsx para poder renderizarlos
 
-}
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.Fragment>
-    <Button text ="Button 0"/>
-    <Button text ="Button 1"/>
-  </React.Fragment>
+  <App />
 )
